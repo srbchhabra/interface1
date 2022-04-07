@@ -169,3 +169,12 @@ a{
 .box p{
     display: contents;
 }
+.bar{
+    position: relative;
+    top: 188px;
+    width: 85%;
+    left: 12px;
+}
+.progress-bar{
+    background-color: #F26522;
+}

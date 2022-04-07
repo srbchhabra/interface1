@@ -3,6 +3,8 @@ import "./style.css"
 import { Form, Button, FormGroup, FormControl, ControlLabel } from 'react-bootstrap';
 import Formpage from './Formpage';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import ProgressBar from 'react-bootstrap/ProgressBar';
+ 
 
 
 const Sidebar = () => {
@@ -21,6 +23,11 @@ const Sidebar = () => {
       <p className="text3"> <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="white" class="bi bi-calendar" viewBox="0 0 16 16">
   <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
 </svg><a href="#">Set Availability</a></p>
+<div className="bar">
+  <p className="text-white text-start " >Progress-25%</p>
+<ProgressBar  now={25}  />
+</div>
+
 <div className="box">
 <p className="text-start">Send us an email. </p>
   <p className="text-start">Support@edge.com</p>
