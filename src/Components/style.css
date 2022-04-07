@@ -1,0 +1,171 @@
+
+.topHead {
+    border: 2px ridge ;
+    
+    height: 80px;
+}
+#headText{
+    position: relative;
+width: 146px;
+height: 23px;
+left: 83%;
+top: 15px;
+font-family: 'ABC Monument Grotesk';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 22px;
+color: #192A3E;
+}
+#headText2{
+    position: relative;
+width: 152px;
+height: 20px;
+left: 84%;
+top: 1px;
+
+font-family: 'ABC Monument Grotesk';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 19px;
+letter-spacing: 0.01em;
+
+color: #90A0B7;
+}
+.container2{
+    position: absolute;
+    width: 100%;
+    height: 80px;
+    left: 0px;
+    top: 0px;
+    
+    /* white */
+    
+    background: #FFFFFF;
+    border-bottom: 0.5px ridge grey;
+}
+.headerImage1{
+    position: absolute;
+width: 124px;
+height: 45px;
+left: 29px;
+top: 18px;
+}
+.headerProfile1{
+    position: absolute;
+    left: 74%;
+    right: -15.22%;
+    top: 2%;
+    bottom: -2.17%;
+    border-radius: 50px;
+     
+    width:50px;
+height:50px;
+}
+#main{
+   
+    background-color:#E5E5E5 ;
+    height: 100vh;
+    padding: 50px;
+}
+.text{
+    position: absolute;
+    width: 300px;
+    height: 36px;
+    left: 10px;
+    top: 113px;
+    
+    font-family: 'ABC Monument Grotesk';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 36px; color: #000000;
+}
+#rectangle{
+    height: 50%;
+    background-color: #2127C2;
+position: absolute;
+width: 297px;
+height: 618px;
+left: 81px;
+top: 173px;
+    ;
+}
+.col-lg-3{
+    position: absolute;
+    width: 297px;
+    height: 618px;
+    left: 81px;
+    top: 173px;
+    
+    /* Primary_Blue */
+    
+    background: #2127C2;
+}
+.text2{
+    margin-top: 50px;
+    margin-left: 10px;
+    font-family: 'ABC Monument Grotesk';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
+    color: #FFFFFF;
+    align-items: center;
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+
+}
+.text3{
+
+    margin-top: 50px;
+    font-family: 'ABC Monument Grotesk';
+    margin-left: 10px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
+    color: #FFFFFF;
+    align-items: center;
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+
+}
+.text4{
+    margin-top: 50px;
+    margin-left: 10px;
+    font-family: 'ABC Monument Grotesk';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
+    color: #FFFFFF;
+    align-items: center;
+    display: flex;
+    gap: 10px;
+    justify-content: flex-start
+}
+a{
+    color: #FFFFFF;
+    font-style: normal;
+    text-decoration: none;
+    text-transform: none;
+
+}
+.box{
+    margin-top: 200px;
+    background-color: #000E64;
+    width: 235px;
+    height: 108px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    color: #ffff;
+    margin-left: 10px;
+}
+.box p{
+    display: contents;
+}

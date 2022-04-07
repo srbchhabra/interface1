@@ -1,0 +1,22 @@
+import React from 'react'
+import "./style.css"
+import logo from "./logo.png"
+import profile from "./profile.png"
+const Header2 = () => {
+  return (
+    <div>
+        <div className="container">
+        <img src={logo} className="headerImage1" alt="" />
+        
+       
+        <img src={profile} className="headerProfile1" alt="" />
+        <p id="headText" >Sierra Ferguson</p>
+      <p id="headText2" >s.ferguson@gmail.com</p>  
+        </div>
+
+        
+    </div>
+  )
+}
+
+export default Header2

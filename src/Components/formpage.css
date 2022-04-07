@@ -1,0 +1,25 @@
+.formstyle{
+    width: 60%;
+    position: absolute;
+   
+    background-color: white;
+    padding: 20px;
+    left: 29%;
+    top: 173px;
+    height: -webkit-fill-available;
+}
+.form-control {
+    display: block;
+    width: 100%;
+    height: 50px;
+}
+.form{
+    text-align: initial;
+    margin-top: 20px;
+    
+}
+button.btn.btn-primary {
+   
+    background-color: #2127c2;
+    float: right;
+}
