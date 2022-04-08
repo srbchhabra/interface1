@@ -165,6 +165,10 @@ a{
     justify-content: flex-start;
     color: #ffff;
     margin-left: 10px;
+    flex-direction: row;
+    text-align: initial;
+    /* gap: 24px; */
+    padding: 12px;
 }
 .box p{
     display: contents;
@@ -177,4 +181,17 @@ a{
 }
 .progress-bar{
     background-color: #F26522;
+}
+svg.bi.bi-chat-right-text {
+    /* display: flex; */
+    position: absolute;
+    top: 81%;
+}
+.progress {
+    display: flex;
+    height: 10px;
+    overflow: hidden;
+    font-size: .75rem;
+    background-color: #e9ecef;
+    border-radius: 0.25rem;
 }
