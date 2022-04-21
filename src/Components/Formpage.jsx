@@ -3,16 +3,34 @@ import { Form, Button, FormGroup, FormControl, ControlLabel } from 'react-bootst
 import "./formpage.css"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import upload from "./upload.jpeg"
+import { useRef } from 'react';
+import {firestore} from "./firebase";
+import{addDoc,collection} from "@firebase/firestore";
+import {fireEvent} from "@testing-library/react";
+
 function Formpage() {
+  const messageRef =useRef();
+  const ref= collection(firestore,"user_data");
+  const handlesave = async(e) => {
+    e.preventDefault();
+  console.log(messageRef.current.value);
+  let data={
+    value:messageRef.current.value,
+  };
+  try{
+    addDoc(ref, data);
+  } catch (e) {console.log(e);
+  }
+};
   return (
     <div className="formstyle" >
         <p className="text-start fw-normal fs-5 fw-normal">Personal Details</p>
-         <Form>
+         <Form onSubmit= {handlesave} >
     <Form.Group className="mb-3 mt-4 text-start d-flex  " controlId="formBasicEmail">
       
-      <Form.Control type="text" className="rounded-0" placeholder="Display Name" />
+      <Form.Control type="text" ref={messageRef} className="rounded-0" placeholder="Display Name" />
       
-      <Form.Control type="email" className="ms-3 rounded-0" placeholder="E-Mails" />
+      <Form.Control type="email" ref={messageRef}  className="ms-3 rounded-0" placeholder="E-Mails" />
       
     </Form.Group>
   
