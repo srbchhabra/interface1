@@ -6,7 +6,7 @@
     padding: 20px;
     left: 29%;
     top: 173px;
-    height: -webkit-fill-available;
+    
 }
 .form-control {
     display: block;
@@ -22,4 +22,30 @@ button.btn.btn-primary {
    
     background-color: #2127c2;
     float: right;
+}
+.form2{
+    height: max-content;
+}
+.uploadSec{
+    height: 150px;
+    border: 1px dashed;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.uploadLogo{
+height: 50px;
+}
+@media (max-width: 767px) {
+    .formstyle {
+        width: 100%;
+        position: relative;
+        background-color: white;
+        padding: 20px;
+        left: 0px;
+        top: 49%;
+        /* margin-top: 305px; */
+    }
 }

@@ -2,6 +2,7 @@ import React from 'react'
 import { Form, Button, FormGroup, FormControl, ControlLabel } from 'react-bootstrap';
 import "./formpage.css"
 import 'bootstrap/dist/css/bootstrap.min.css';
+import upload from "./upload.jpeg"
 function Formpage() {
   return (
     <div className="formstyle" >
@@ -51,12 +52,56 @@ function Formpage() {
     <textarea className="form-control w-100 rounded-0 " input type="text"  data-role="tagsinput" id="exampleFormControlTextarea1" rows="3"> </textarea>
 
   </div>
+  <div className="mb-3">
+    <label for="exampleFormControlTextarea1" className="form-label text-start fw-bold">What subjects are you qualified to teach?  </label>
+   
+    <textarea className="form-control w-100 rounded-0 " input type="text"  data-role="tagsinput" id="exampleFormControlTextarea1" rows="3"> </textarea>
+
+  </div>
+  <div className="mb-3">
+    <label for="exampleFormControlTextarea1" className="form-label text-start fw-bold">What branches of math do you teach?  </label>
+   
+    <textarea className="form-control w-100 rounded-0 " input type="text"  data-role="tagsinput" id="exampleFormControlTextarea1" rows="3"> </textarea>
+
+  </div>
+  <div className="mb-3">
+    <label for="exampleFormControlTextarea1" className="form-label text-start fw-bold">What branches of Science do you teach?  </label>
+   
+    <textarea className="form-control w-100 rounded-0 " input type="text"  data-role="tagsinput" id="exampleFormControlTextarea1" rows="3"> </textarea>
+
+  </div>
+  <div className="mb-3">
+    <label for="exampleFormControlTextarea1" className="form-label text-start fw-bold">Describe your teaching specialization(s).  </label>
+   
+    <textarea className="form-control w-100 rounded-0 " input type="text"  data-role="tagsinput" id="exampleFormControlTextarea1" rows="3"> </textarea>
+
+  </div>
+
+  <div className="form-check">
+  <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault"/>
+  <label className="form-check-label" for="flexCheckDefault">
+  Experience teaching students with disabilities
+  </label>
+</div>
+
+<Form.Group controlId="formFile" className="mt-5 mb-3 text-start fw-bold">
+    <Form.Label>Upload Teaching License</Form.Label>
+    
+    <Form.Control type="file" className="form2" />
+  </Form.Group>
+ 
     
       </div>
+      <div className="uploadSec">
+      <img src={upload} className="uploadLogo" alt="" />
+    Browse files or Drag and Drop here(Only pdf and jpeg)
+
+  </div>
     <Button variant="primary" type="submit">
      Save and Next
     </Button>
   </Form>
+  
   
   
   </div>
