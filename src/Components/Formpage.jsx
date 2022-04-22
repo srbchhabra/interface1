@@ -9,6 +9,7 @@ import{addDoc,collection} from "@firebase/firestore";
 import {fireEvent} from "@testing-library/react";
 
 function Formpage() {
+  const [data, setdata] = React.useState({});
   const messageRef =useRef();
   const ref= collection(firestore,"user_data");
   const handlesave = async(e) => {
@@ -22,15 +23,22 @@ function Formpage() {
   } catch (e) {console.log(e);
   }
 };
+function valueChange (e)
+{
+const {name,value}=e.target
+console.log(name,value)
+setdata(prev=>  ({...prev,[name]:value}))
+};
+console.log(data)
   return (
     <div className="formstyle" >
         <p className="text-start fw-normal fs-5 fw-normal">Personal Details</p>
          <Form onSubmit= {handlesave} >
     <Form.Group className="mb-3 mt-4 text-start d-flex  " controlId="formBasicEmail">
       
-      <Form.Control type="text" ref={messageRef} className="rounded-0" placeholder="Display Name" />
+      <Form.Control type="text" name="username" onChange={valueChange} ref={messageRef} className="rounded-0" placeholder="Display Name" />
       
-      <Form.Control type="email" ref={messageRef}  className="ms-3 rounded-0" placeholder="E-Mails" />
+      <Form.Control type="email" name="email" onChange={valueChange} ref={messageRef}  className="ms-3 rounded-0" placeholder="E-Mails" />
       
     </Form.Group>
   
