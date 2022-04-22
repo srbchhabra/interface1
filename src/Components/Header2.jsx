@@ -4,8 +4,9 @@ import logo from "./logo.png"
 import profile from "./profile.png"
 const Header2 = () => {
   return (
+    <div className="sticky-top" >
     <div>
-        <div className="container">
+        <div className="container-fluid ">
         <img src={logo} className="headerImage1" alt="" />
         
        
@@ -14,8 +15,8 @@ const Header2 = () => {
       <p id="headText2" >s.ferguson@gmail.com</p>  
         </div>
 
-        
-    </div>
+        </div>
+        </div>
   )
 }
 

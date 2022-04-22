@@ -4,6 +4,10 @@
     
     height: 80px;
 }
+.container-fluid{
+    background: white;
+    height: 70px;
+}
 #headText{
     position: relative;
 width: 146px;
