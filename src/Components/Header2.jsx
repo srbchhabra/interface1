@@ -6,7 +6,7 @@ const Header2 = () => {
   return (
     <div className="sticky-top" >
     <div>
-        <div className="container-fluid ">
+        <div className="container-fluid topp ">
         <img src={logo} className="headerImage1" alt="" />
         
        
