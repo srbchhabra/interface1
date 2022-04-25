@@ -7,6 +7,7 @@ import { useRef } from 'react';
 import {firestore} from "./firebase";
 import{addDoc,collection} from "@firebase/firestore";
 import {fireEvent} from "@testing-library/react";
+import UploadImage from './UploadImage';
 
 function Formpage() {
   const [data, setdata] = React.useState({});
@@ -128,7 +129,7 @@ console.log(data)
     </Button>
   </Form>
   
-  
+  <UploadImage/>
   
   </div>
   
