@@ -129,7 +129,7 @@ console.log(data)
     </Button>
   </Form>
   
-  <UploadImage/>
+ 
   
   </div>
   
