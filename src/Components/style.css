@@ -249,3 +249,8 @@ padding: 0px; }
     display: grid;
     justify-content: center;
 }
+#imageInput{
+    width: 0px;
+     visibility:hidden;
+     display:none;
+ }
