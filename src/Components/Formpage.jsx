@@ -121,7 +121,7 @@ console.log(data)
       </div>
       <div className="uploadSec">
       <DragDrop ></DragDrop>
-    Browse files or Drag and Drop here(Only pdf and jpeg)
+    
 
   </div>
     <Button variant="primary" type="submit">
