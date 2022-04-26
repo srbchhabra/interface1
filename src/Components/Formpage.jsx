@@ -7,7 +7,7 @@ import { useRef } from 'react';
 import {firestore} from "./firebase";
 import{addDoc,collection} from "@firebase/firestore";
 import {fireEvent} from "@testing-library/react";
-import UploadImage from './UploadImage';
+import DragDrop from "./DragDrop";
 
 function Formpage() {
   const [data, setdata] = React.useState({});
@@ -120,7 +120,7 @@ console.log(data)
     
       </div>
       <div className="uploadSec">
-      <img src={upload} className="uploadLogo" alt="" />
+      <DragDrop ></DragDrop>
     Browse files or Drag and Drop here(Only pdf and jpeg)
 
   </div>
