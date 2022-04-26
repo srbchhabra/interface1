@@ -27,8 +27,7 @@ button.btn.btn-primary {
     height: max-content;
 }
 .uploadSec{
-    height: 150px;
-    border: 1px dashed;
+    
     margin-bottom: 50px;
     display: flex;
     justify-content: center;
