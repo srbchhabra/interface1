@@ -8,6 +8,7 @@ import {firestore} from "./firebase";
 import{addDoc,collection} from "@firebase/firestore";
 import {fireEvent} from "@testing-library/react";
 import DragDrop from "./DragDrop";
+import { useState } from 'react';
 
 function Formpage() {
   const [data, setdata] = React.useState({});
@@ -24,6 +25,19 @@ function Formpage() {
   } catch (e) {console.log(e);
   }
 };
+const [details,setDetails] =useState({
+  fname:'',
+  phone:'',
+  email:'',
+})
+const PostData=async(e)=>{
+  e.preventDefault()
+  const{fname,phone,email}=details;
+  const res=await fetch("https://interface-2e563-default-rtdb.firebaseio.com/simpleform.json",
+  {method:'POST', headers:{'Content-Type':'application/json'},
+body:JSON.stringify({fname,phone,email,})
+})
+}
 function valueChange (e)
 {
 const {name,value}=e.target
@@ -37,15 +51,18 @@ console.log(data)
          <Form onSubmit= {handlesave} >
     <Form.Group className="mb-3 mt-4 text-start d-flex  " controlId="formBasicEmail">
       
-      <Form.Control type="text" name="username" onChange={valueChange} ref={messageRef} className="rounded-0" placeholder="Display Name" />
+      <Form.Control type="text" name="username" onChange={(e)=> 
+        setDetails({...details,fname:e.target.value})} ref={messageRef} className="rounded-0" placeholder="Display Name" />
       
-      <Form.Control type="email" name="email" onChange={valueChange} ref={messageRef}  className="ms-3 rounded-0" placeholder="E-Mails" />
+      <Form.Control type="email" name="email" onChange={(e)=> 
+        setDetails({...details,email:e.target.value})} ref={messageRef}  className="ms-3 rounded-0" placeholder="E-Mails" />
       
     </Form.Group>
   
     <Form.Group className="mt-4 text-start d-flex" controlId="formBasicPassword">
       
-      <Form.Control type="text" className="rounded-0" placeholder="Phone number" />
+      <Form.Control type="text" onChange={(e)=> 
+        setDetails({...details,phone:e.target.value})} className="rounded-0" placeholder="Phone number" />
       <Form.Control type="text" className="ms-3 rounded-0" placeholder="Zip Code" />
     </Form.Group>
     <div className="form">
@@ -124,7 +141,7 @@ console.log(data)
     
 
   </div>
-    <Button variant="primary" type="submit">
+    <Button variant="primary" type="submit" onClick={PostData}>
      Save and Next
     </Button>
   </Form>
