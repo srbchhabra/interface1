@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {storage} from './firebase'
 import {getDownloadURL, ref, uploadBytesResumable} from "firebase/storage";
+import ReactPlayer from 'react-player'
 
 function Video() {
 
@@ -14,6 +15,7 @@ console.log("Upload is" + progress + "%done" );
 
 }).then(snapshot=>{getDownloadURL(snapshot.ref).then(url=>{console.log(url)})})
     }
+   
     const keyGenerator = () => {
       return (
         Math.random().toString(36).substring(2, 15) +
@@ -21,9 +23,11 @@ console.log("Upload is" + progress + "%done" );
       );
     };
     console.log(keyGenerator())
+    
   return (
     <div>video
         <input type="file" onChange={uploadFile} />
+        <ReactPlayer url='https://www.youtube.com/watch?v=ysz5S6PUM-U' />
     </div>
   )
 }
